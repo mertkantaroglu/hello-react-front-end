@@ -1,4 +1,4 @@
-- [� Hello React Front End ](#-hello-react-front-end-)
+- [Hello React Front End ](#-hello-react-front-end-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -38,7 +38,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Provide data with API**
+- **Display random greeting messages**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
