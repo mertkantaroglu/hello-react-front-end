@@ -9,7 +9,7 @@ const initialState = {
 export const getGreeting = createAsyncThunk('getGreetings', async () => {
   try {
     const response = await axios.get('http://127.0.0.1:3000/api/greetings');
-    const data = response;
+    const { data } = response;
     return data;
   } catch (error) {
     return error.message;
@@ -19,11 +19,13 @@ export const getGreeting = createAsyncThunk('getGreetings', async () => {
 export const greetingsSlice = createSlice({
   name: 'greetings',
   initialState,
-  reducers: {},
+  reducers: {
+  },
   extraReducers: (builder) => {
-    builder.addCase(getGreeting.fulfilled, (state, action) => {
-      state.greeting = action.payload;
-    });
+    builder
+      .addCase(getGreeting.fulfilled, (state, action) => {
+        state.greeting = action.payload;
+      });
   },
 });
 
