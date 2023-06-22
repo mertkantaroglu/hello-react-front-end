@@ -7,13 +7,9 @@ const initialState = {
 };
 
 export const getGreeting = createAsyncThunk('getGreetings', async () => {
-  try {
-    const response = await axios.get('http://127.0.0.1:3000/api/greetings');
-    const { data } = response;
-    return data;
-  } catch (error) {
-    return error.message;
-  }
+  const response = await axios.get('http://127.0.0.1:3000/api/greetings');
+  const { data } = response;
+  return data;
 });
 
 export const greetingsSlice = createSlice({
